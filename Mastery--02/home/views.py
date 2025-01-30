@@ -10,8 +10,12 @@ from django.shortcuts import render
 
 
 # Second context base data pass dynamic way
+# def home(req):
+#     name = "Django"
+#     roll = "65478"
+#     dic = {'nm':name, 'rol':roll}
+#     return render(req, 'home/home.html', dic)
+
+# Use to Simple Filter arguments 
 def home(req):
-    name = "Django"
-    roll = "65478"
-    dic = {'nm':name, 'rol':roll}
-    return render(req, 'home/home.html', dic)
+    return render(req, 'home/home.html', {'nm':'coder', 'dis':'Python Backend Developer'})
