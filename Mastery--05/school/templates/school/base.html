@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+{% load static %}
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="{% static 'school/style.css' %}">
+    {% block title %} <title>Base</title> {% endblock %}
+</head>
+<body>
+    {% block body %}
+    <h1>Base Template</h1>
+    {% endblock %}
+
+    <!-- First Way in hyperlink  -->
+    <nav>
+        <li><a href="/school/school">School</a></li>
+        <li><a href="/collage/collage">Collage</a></li>
+    </nav>
+    <hr>
+
+</body>
+</html>
