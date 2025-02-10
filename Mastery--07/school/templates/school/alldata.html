@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <h2>model all data show</h2> 
+    {{alldata}}
+
+
+    <h2>Conditions use and data show or not show</h2>
+    {% if alldata %} 
+    <h2>All Data Active</h2>
+    {% else %}
+    <h2>No Data</h2>
+    {% endif %}
+
+
+    <h2>For loop use this project</h2>
+    <ul>
+        {% for data in alldata %} 
+        <li>{{data.name}}</li>
+        <li>{{data.email}}</li>
+        <li>{{data.city}}</li>
+    
+        {% endfor %}
+    </ul>
+    
+    
+</body>
+</html>

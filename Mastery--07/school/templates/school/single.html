@@ -1,0 +1,16 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Single Data</title>
+</head>
+<body>
+    {% if single %}
+    <h1>Show Data</h1>
+    {{single.name}} -- {{single.email}} -- {{single.city}}
+    {% else %}
+    <h1> No Data </h1>
+    {% endif %}
+</body>
+</html>
