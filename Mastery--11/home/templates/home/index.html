@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Registation Student From</title>
+</head>
+<body>
+    <h1>Registation Student From</h1>
+
+    <!-- Complete form at once -->
+    <!-- {{registation}}
+    <input type="button" value="Submit"> -->
+
+    <!-- from field by from  -->
+    <!-- <form action="">
+        First_Name : {{registation.first_name}} <br>
+        Last_Name : {{registation.last_name}} <br>
+        <button>Submit</button>
+    </form> -->
+
+    <!-- Using To label tag & input label tag  -->
+    <!-- <form action="">
+        {{registation.first_name.label_tag}} {{registation.first_name}} <br>
+        {{registation.last_name.label_tag}} {{registation.last_name}} <br>
+        <button>Submit</button>
+    </form> -->
+
+    <!-- Perfrom to manually label tag using my project simple base  -->
+    <!-- <form action="">
+        <label for="">First_Name</label> {{registation.first_name}} <br>
+        <label for="">Last_Name</label> {{registation.last_name}} <br>
+        <button>Submit</button>
+    </form> -->
+
+    <!-- attrebute display -->
+    <form action="">
+        <label for="{{registation.first_name.id_for_label}}">First_Name</label> {{registation.first_name}} <br>
+        <label for="{{registation.last_name.id_for_label}}">Last_Name</label> {{registation.last_name}} <br>
+        <button>Submit</button>
+    </form>
+        
+
+
+</body>
+</html>
