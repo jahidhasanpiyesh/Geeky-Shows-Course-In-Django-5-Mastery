@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+{% load static %}
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="{% static 'css/style.css' %}">
+    <title>TailwindCSS CLI</title>
+</head>
+
+<body>
+    <h1>TailwindCSS CLI</h1>
+
+    <div class="nav">
+        <a href="{% url 'index' %}">
+            <button>back</button>
+        </a>
+
+        <a href="{% url 'home' %}">Home</a>
+    </div>
+
+
+
+    {% block blockname %}
+    <p>index page</p>
+    {% endblock blockname %}
+
+    <ul>Home</ul>
+    <ul>Page</ul>
+    <ul>Account</ul>
+    <ul>About Us</ul>
+
+</body>
+
+</html>

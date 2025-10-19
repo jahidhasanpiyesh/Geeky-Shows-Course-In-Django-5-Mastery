@@ -1,0 +1,17 @@
+*{
+    margin: 0;
+    padding: 0;
+    background-color: aqua;
+    text-align: center;
+}
+
+.nav{
+    background-color: black;
+    color: white;
+    
+}
+
+a{
+    margin-right: 20px;
+    text-decoration: none;
+}
