@@ -1,0 +1,13 @@
+{% extends 'html/index.html' %}
+{% block title %}
+<title>Django all Fields update</title>
+{% endblock title %}
+
+{% block body %}
+<h1> Django Forms base fields update </h1> <br> <br>
+<form action="" method="POST" class="all">
+    {% csrf_token %}
+    {{ fm.as_p }} <br>
+    <button type="submit">Submit</button>
+</form>
+{% endblock body %}

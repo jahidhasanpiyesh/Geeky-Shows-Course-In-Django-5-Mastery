@@ -1,19 +1,32 @@
 <!DOCTYPE html>
 {% load static %}
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="{% static 'css/style.css' %}">
+
+    {% block title %}
     <title>Django all Fields</title>
+    {% endblock title %}
+
 </head>
+
 <body>
 
+
+    <a href="{% url 'demo_view' %}">Demo</a>
+    {% block body %}
     <h1> Django Forms base fields Section </h1> <br> <br>
-    <form action="" method="post" class="all">
+    <form action="" method="POST" class="all">
         {% csrf_token %}
         {{ form.as_p }} <br>
         <button type="submit">Submit</button>
     </form>
+    {% endblock body %}
+
+
 </body>
+
 </html>
