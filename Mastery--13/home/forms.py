@@ -53,4 +53,38 @@ class demoforms(forms.Form):
         label='Your Name',
         max_length=100,
         label_suffix=' : ',
+        help_text= 'Enter Your Full Name'
     )
+    email = forms.EmailField(
+        label ='Email',
+        disabled= True
+    )
+    pincode = forms.IntegerField(
+        label='pincode',
+        min_value=100000,
+        max_value=999999,
+        error_messages ={
+            'min_value': 'pincode should be 6 digit must be',
+            'max_value': 'pincode should be 6 digit only',
+            'error_messages': 'Enter Your Valid Pincode'
+        }
+    )
+
+    age = forms.FloatField(
+        label ='age',
+        min_value = 0,
+    )
+
+    dath_of_birth = forms.DateField(
+        label='date of birth',
+        required= False,
+        help_text = 'Enter Your Real Birth Date'
+    )
+
+    appointment_datetime = forms.DateTimeField(
+        label = 'datetime',
+        required = False
+    )
+
+    
+
