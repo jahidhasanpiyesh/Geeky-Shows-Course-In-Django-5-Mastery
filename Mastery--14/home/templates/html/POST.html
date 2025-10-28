@@ -1,0 +1,10 @@
+{% extends 'html/GET.html' %}
+{% block title %} POST-Request {% endblock %}
+{% block body %}
+<h1>POST-Request page</h1>
+<form action="" method="post">
+    {% csrf_token %}
+    {{post.as_p}}
+    <button type="submit">Submit</button>
+</form>
+{% endblock %}
