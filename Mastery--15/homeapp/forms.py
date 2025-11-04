@@ -13,3 +13,14 @@ class userlogin(forms.Form):
         if len(name) < 5:
             raise forms.ValidationError("Name must be at Least 5 Characters")
         return name
+    
+    # Custom Validation for Email Field
+    def clean_email(self):
+        email = self.cleaned_data.get('email')
+        if not email.endswith('.com'):
+            raise forms.ValidationError("Email Must be end With .com")
+        elif not "@" in email:
+            raise forms.ValidationError("Email Must Contain @ Symbol")
+        elif len(email) < 12:
+            raise forms.ValidationError("Email Must be Less Than 12 Characters")
+        return email
